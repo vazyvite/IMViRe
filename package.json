@@ -1,0 +1,21 @@
+{
+  "name": "projetmanagement",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jjacques",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "csv-parse": "^2.5.0",
+    "electron": "^2.0.4",
+    "fast-csv": "^2.4.1",
+    "jquery": "^3.3.1",
+    "jquery-browserify": "^1.8.1",
+    "jquery-mousewheel": "^3.1.13",
+    "stream-transform": "^1.0.2"
+  }
+}

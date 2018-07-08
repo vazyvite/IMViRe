@@ -1,0 +1,181 @@
+#elContainer {
+    text-align: center;
+
+    &.histogramme {
+        .elBloc {
+            display: block;
+        }
+    }
+
+    .elBloc {
+        width: 5%;
+        max-width: 5%;
+        height: 5em;
+        display: inline-block;
+        padding: .5em;
+        margin: .5em 1em;
+        border: 1px solid #000;
+        cursor: pointer;
+        position: relative;
+
+        .elBloc-children {
+            position: absolute;
+            right: .5em;
+            bottom: .5em;
+            color: #333;
+
+            .elBloc-children-nb {
+                margin-right: 0.25em;
+            }
+        }
+
+        .elBloc-title {
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+        }
+
+        // état abandonné, annulé
+        &.etat-1 {
+            // background-color: #FFF;
+            // color: #AAA;
+            color: #818182;
+            background-color: #fefefe;
+            border-color: #fdfdfe;
+        }
+        // état en attente
+        &.etat0 {
+            // background-color: #FFF;
+            // color: #555;
+            color: #1b1e21;
+            background-color: #d6d8d9;
+            border-color: #c6c8ca;
+        }
+        // état en étude / chiffrage
+        &.etat1,
+        &.etat2 {
+            // background-color: #FFF;
+            // color: #000;
+            color: #383d41;
+            background-color: #e2e3e5;
+            border-color: #d6d8db;
+        }
+        // état en spécification / spécifié / prêt (backlog)
+        &.etat3,
+        &.etat4,
+        &.etat5 {
+            // background-color: rgb(129, 6, 6);
+            // color: #FFF;
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        // état en développement / réalisation / réalisé / état en test, état testé
+        &.etat6,
+        &.etat7,
+        &.etat8,
+        &.etat9 {
+            // background-color: rgb(194, 119, 8);
+            // color: #000;
+            color: #856404;
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+        } 
+        // état livré / en validation / validé
+        &.etat10,
+        &.etat11,
+        &.etat12 {
+            // background-color: rgb(70, 184, 4);
+            // color: #000;
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+    }
+}
+
+.nav {
+    min-height: 38px;
+    li {
+        margin-left: .5em;
+    }
+}
+
+#titleContext {
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            &:after {
+                content: "/";
+                margin-left: .5em;
+                margin-right: .5em;
+            }
+            &:last-child {
+                font-weight: bold;
+                button {
+                    text-decoration: none !important;
+                    cursor: default !important;
+                }
+                &:after {
+                    content: "";
+                }
+            }
+
+            button.btn-retour-historique {
+                line-height: 2.5em;
+                background-color: #FFF;
+                border: 0;
+                padding: 0;
+                font-weight: inherit;
+                cursor: pointer;
+
+                &[disabled] {
+                    color: #000;
+                }
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+#searchContainer {
+    position: fixed;
+    top: 1em;
+    right: 9em;
+    width: 20em;
+}
+
+#zoomLevel {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+
+    .input-group {
+        p {
+            margin-bottom: 0;
+        }
+        .input-group-text.fas {
+            padding-top: .6em;
+        }
+    }
+}
+
+button, .btn {
+    &:focus {
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-color: -webkit-focus-ring-color;
+        outline-style: auto;
+        outline-width: 5px;
+    }
+}

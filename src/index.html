@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<title>IMViRe</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		<link type="text/css" rel="stylesheet" href="resources/css/style.min.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<header role="banner">
+				<h1 title="Interface de Management Visuel de Réalisation">IMViRe</h1>
+			</header>
+			<main role="main" id="main">
+				<div id="searchContainer">
+					<div class="input-group">
+						<input type="search" id="search" class="form-control" aria-label="rechercher" placeholder="Rechercher" list="elements" />
+						<datalist id="elements"></datalist>
+						<datalist id="elementsNumbers"></datalist>
+						<div class="input-group-append">
+							<button type="button" id="searchButton" class="btn btn-outline-dark">
+								<span class="fas fa-search"></span>
+								<span class="sr-only">Rechercher</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div id="zoomLevel">
+					<div class="input-group">
+						<p class="input-group-prepend">
+							<span class="input-group-text fas fa-expand"></span>
+						</p>
+						<p class="input-group-append">
+							<span class="input-group-text" id="stepWidthElBloc_text">5</span>
+						</p>
+					</div>
+				</div>
+				<ul class="nav">
+					<li class="nav-item">
+						<button type="button" class="btn btn-outline-dark" id="ReturnToRoot" title="Retour à la racine" style="display:none;">
+							<span class="fas fa-angle-double-left"></span>
+							<span class="sr-only">Retour au parent</span>
+						</button>
+					</li>
+					<li class="nav-item">
+						<button type="button" class="btn btn-outline-dark" id="ReturnToParent" title="Retour au parent" style="display:none;">
+							<span class="fas fa-angle-left"></span>
+							<span class="sr-only">Retour à la racine</span>
+						</button>
+					</li>
+					<li id="titleContext"></li>
+				</ul>
+				<div id="elContainer"></div>
+
+				<div id="elInfosContainer">
+					<h2 class="h4">Détails</h2>
+					<form>
+						<div class="form-group row">
+							<!-- ID -->
+							<div class="col-md-1">
+								<label for="champ_id">ID</label>
+								<input type="text" readonly id="champ_id" data-bind="id" class="form-control-plaintext" />
+							</div>
+							<!-- ID Parent -->
+							<div class="col-md-1">
+								<label for="champ_idParent">ID Parent</label>
+								<input type="text" readonly id="champ_idParent" data-bind="idParent" class="form-control-plaintext" />
+							</div>
+							<!-- Date de création -->
+							<div class="col-md-2">
+								<label for="champ_date_creation">Date de création</label>
+								<input type="text" readonly id="champ_date_creation" data-bind="date_creation" class="form-control-sm form-control-plaintext" />
+							</div>
+							<!-- Titre -->
+							<div class="col-md-6">
+								<label for="champ_titre">Titre</label>
+								<input type="text" id="champ_titre" data-bind="titre" class="form-control" />
+							</div>
+							<!-- Etat -->
+							<div class="col-md-2">
+								<label for="champ_etat">Statut</label>
+								<select id="champ_etat" data-bind="etat" class="form-control">
+									<option value="-1">Abandonné / Annulé</option>
+									<option value="0">A arbitrer / N/A</option>
+									<option value="1">En étude</option>
+									<option value="2">Chiffré</option>
+									<option value="3">En cours de spécification</option>
+									<option value="4">Spécifié - prêt à intégrer le Backlog</option>
+									<option value="5">Backlog - prêt pour réalisation</option>
+									<option value="6">En cours de réalisation</option>
+									<option value="7">Réalisé - prêt pour test</option>
+									<option value="8">En cours de test</option>
+									<option value="9">Testé - prêt pour livraison</option>
+									<option value="10">Livré</option>
+									<option value="11">En validation</option>
+									<option value="12">Validé</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<!-- Détails -->
+							<div class="col-md-12">
+								<label for="champ_details">Détails</label>
+								<textarea id="champ_details" data-bind="details" class="form-control"></textarea>
+							</div>
+						</div>
+						<div class="form-group row" role="group" aria-labelledby="titreBudget">
+							<h3 id="titreBudget" class="h5 col-md-12">Gestion du budget</h3>
+							<!-- Budget -->
+							<div class="col-md-1">
+								<label for="champ_budget">Budget</label>
+								<input type="number" step="0.25" min="0" id="champ_budget" data-bind="budget" class="form-control" />
+							</div>
+							<!-- Conso -->
+							<div class="col-md-1">
+								<label for="champ_conso">Consommé</label>
+								<input type="number" step="0.25" min="0" id="champ_conso" data-bind="conso" class="form-control" />
+							</div>
+							<!-- RAF -->
+							<div class="col-md-1">
+								<label for="champ_raf">RAF</label>
+								<input type="number" step="0.25" min="0" id="champ_raf" data-bind="RAF" class="form-control" />
+							</div>
+						</div>
+						<div id="infos-additionnal-content"></div>
+						<div class="row">
+							<button type="button" id="maj-infos-element"></button>
+						</div>
+					</form>
+				</div>
+			</main>
+		</div>
+
+		<script type="text/javascript">
+			const csvEngine = require("./resources/js/app.csv");
+			// const $ = require("jquery");
+			const $ = require('jquery-browserify');
+			require('jquery-mousewheel')($);
+			const csv = new csvEngine();
+			csv.init();
+			csv.load('./src/config.csv', function () {
+				csv.draw();
+			});
+			csv.draw();
+		</script>
+	</body>
+</html>

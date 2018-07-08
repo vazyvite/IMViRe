@@ -1,0 +1,129 @@
+id;idParent;titre;details;etat;date_creation;budget;conso;RAF
+1;;DAUA;Démarche DAUA;6;43334;548;312;236
+2;1;PROTO;Lot PROTO pour la mise en place du cœur de l'applicatif DAUA;6;43339;548;312;236
+3;1;Lot 1 A;Lot 1 (A) pour la mise en place des fonctionnalités supplémentaires;0;43189;0;0;0
+4;1;Lot 1 B;Lot 1 (B) pour la mise en place des contenus supplémentaires;0;43382;0;0;0
+5;1;Lot 2;Lot 2 pour les évolutions;0;43253;0;0;0
+6;2;Référentiels;Gestion des référentiels;6;43361;23;9;14
+7;6;Référentiel des textes courts;Référentiel des textes courts;4;43316;1;1;0
+8;6;Référentiel des textes longs;Référentiel des textes longs;11;43235;1;1;0
+9;6;Référentiel des communes raccordées;Référentiel des communes raccordées;11;43225;1;1;0
+10;6;B1;Référentiel du guidage;6;43385;5;3;2
+11;6;Rechargement à chaud;Traitements de rechargement à chaud;6;43312;15;3;12
+12;11;Rechargement à chaud B1;Traitements de rechargement à chaud du B1 + traitements de vérification du format du fichier;11;43273;15;3;12
+13;2;Accueil;Page d'accueil;11;43262;1;0;1
+14;13;Contenu de la page Accueil;Mise en place du contenu de la page d'accueil;11;43246;1;0;1
+15;2;Lieu de travaux;Page lieu de travaux. Permet à l'utilisateur de définir l'adresse et le point de travaux.;11;43232;101;54;47
+16;15;Annuaire des administrations;Appel à l'annuaire des administrations;11;43354;2;0;2
+17;15;Affichage des informations de la mairie;"Récupération des informations sur les mairies et affichage
+Récupération des informations de connexion de la mairie et affichage";11;43333;1;1;0
+18;15;URL Géoportail;Calcul de l'URL Géoportail en fonction de l'adresse des travaux;11;43332;1;1;0
+19;15;URL GPU;Calcul de l'URL GPU en fonction de l'adresse des travaux;11;43280;1;1;0
+20;15;API BAN;Mise en place de l'API BAN;11;43283;15;8;7
+21;15;Autocomplétion commune + cp BAN;Mise en place des traitements d'autocomplétion sur la commune BAN;11;43221;5;3;2
+22;15;Saisie commune;Intégration du champ de saisie de la commune des travaux;11;43252;1;1;0
+23;15;Validation commune;Mise en place d'une modale permettant de gérer les avertissements utilisateurs si la commune n'est pas connue du référentiel BAN;11;43358;5;4;1
+24;15;Débrayage commune BAN;Mise en place d'un système de débrayage (sauvegarde de l'information de modification manuelle et volontaire de la commune par l'utilisateur);11;43345;3;1;2
+25;15;Autocomplétion adresse BAN;Mise en place des traitements d'autocomplétion sur l'adresse BAN;11;43329;5;4;1
+26;15;Saisie adresse BAN;Intégration du champ de saisie de l'adresse des travaux;11;43343;1;0;1
+27;15;Découpage adresse BAN;Mise en place d'un système de découpage d'adresse par l'utilisateur si les informations remontées par la BAN ne sont pas suffisamment précises;11;43200;5;2;3
+28;15;Validation adresse BAN;Mise en place d'une modale permettant de gérer les avertissements utilisateurs si l'adresse n'est pas connue du référentiel BAN;11;43292;5;2;3
+29;15;Géolocalisation Adresse BAN;Mise en place d'un traitement de géolocalisation en fonction de l'adresse saisie par l'utilisateur sur l'API Carto IGN;11;43329;2;2;0
+30;15;Débrayage adresse BAN;Mise en place d'un système de débrayage (sauvegarde de l'information de modification manuelle et volontaire de l'adresse par l'utilisateur);11;43331;3;0;3
+31;15;API Carto;Intégration de l'API Carto;11;43389;10;4;6
+32;15;Couche Cadastre;Intégration de la couche Cadastre sur l'API Carto;11;43242;3;0;3
+33;15;Sélection parcelle principale;Mise en place des traitements et comportements de sélection de la parcelle principale par formulaire et API Carto.;11;43304;5;1;4
+34;15;Validation parcelle principale;Mise en place d'un système de validation de la parcelle pour vérifier qu'elle existe bien dans la couche Cadastre et qu'elle est bien située sur la commune renseignée;11;43263;15;12;3
+35;15;Débrayage parcelle principale;Mise en place d'un système de débrayage (sauvegarde de l'information de modification manuelle et volontaire de la parcelle principale par l'utilisateur);11;43235;3;1;2
+36;15;Ajout parcelle secondaire;Mise en place de la possibilité pour l'utilisateur de saisir des parcelles secondaires;11;43369;3;3;0
+37;15;Validation parcelle secondaire;Mise en place d'un système de validation de la parcelle secondaide pour vérifier qu'elle existe bien dans la couche Cadastre et qu'elle est bien située sur la commune renseignée;11;43217;5;1;4
+38;15;Validation du lieu de travaux;Mise en place d'un système de validation du lieu de travaux pour s'assurer que toutes les informations requises sont correctement renseignées afin de laisser l'utilisateur passer à la section suivante;11;43340;2;2;0
+39;2;Accueil guidage;Page Accueil guidage;6;43357;62;36;26
+40;39;Parcours possibles;Mise en place du bloc des parcours possibles;6;43223;10;6;4
+41;39;Parcours commencés;Mise en place du bloc des parcours commencés;6;43213;10;9;1
+42;39;Parcours obligatoires;Mise en place du bloc des parcours obligatoires;11;43218;10;0;10
+43;39;Parcours facultatifs;Mise en place du bloc des parcours facultatifs;11;43277;10;8;2
+44;39;Mode expert;Mise en place du mode expert;11;43265;2;1;1
+45;39;Modification parcours;Traitement de modification d'un parcours commencé;11;43371;5;3;2
+46;39;Suppression parcours;Traitement de suppression d'un parcours commencé;11;43256;5;2;3
+47;39;Monotravaux;Mise en place des restrictions liées au monotravaux;6;43241;2;1;1
+48;39;Validation guidage;Mise en place des traitements de validation du guidage;11;43359;2;1;1
+49;39;Traitement d'initialisation de la saisie;Mise en place des traitements d'initialisation de la saisie afin d'identifier les champs à saisir en fonction du cerfa identifié;6;43353;5;5;0
+50;39;Icones de parcours;Mise en place des icones de parcours avec double état (repos + survol);6;43351;1;0;1
+51;2;guidage;Page Guidage;6;43385;130;90;40
+52;51;Moteur Nashorn;Mise en place du moteur JS Nashorn;11;43192;40;37;3
+53;51;Affichage des questions;Affichage des questions au niveau de l'IHM;11;43256;30;27;3
+54;51;Prise en compte des réponses;Prise en compte des réponses de l'utilisateur et appels pour affichage de la question suivante;11;43294;20;2;18
+55;51;Fin de guidage;Mise en place des traitements de cloture d'un parcours de guidage;11;43190;5;4;1
+56;51;Initialisation des variables;Traitement d'initialisation des variables de guidage;6;43278;5;3;2
+57;51;Interprétation des traitements;Mise en place des traitements du guidage;11;43267;10;1;9
+58;51;Valorisation des variables;Mise en place de la valorisation des variables;6;43364;5;5;0
+59;51;Traitements inter-parcours;Mise en place des traitements interparcours;11;43348;5;5;0
+60;51;Assistance guidage;Mise en place de l'assistance sur le guidage;3;43352;5;2;3
+61;51;Controles de surface guidage;Mise en place des contrôles de surface sur le guidage;6;43223;5;4;1
+62;2;Vue d'ensemble;Page Vue d'ensemble;6;43244;56;24;32
+63;62;Récapitulatif Guidage;Mise en place du bloc récapitulatif du guidage;3;43320;5;0;5
+64;62;Récapitulatif Saisie;Mise en place du bloc récapitulatif de la saisie;6;43263;10;2;8
+65;62;Affichage conditionnel des champs;Traitement d'affichage des champs selon condition : champs obligatoires ou champs facultatifs renseignés;7;43274;3;0;3
+66;62;Avancement de saisie;Affichage et calcul du taux d'avancement de la saisie sur chaque page en fonction du nombre de champs obligatoires saisis sur le nombre de champs obligatoires total;11;43302;5;5;0
+67;62;Récapitulatif Pièces jointes;Mise en place du bloc récapitulatif des pièces jointes;11;43359;3;1;2
+68;62;Note à l'administration;Mise en place du champ Note à l'administration;11;43287;1;0;1
+69;62;Génération PDF Récapitulatif;Génération du fichier PDF Récapitulatif;6;43260;10;9;1
+70;62;Génération PDF Pièces jointes;Génération du fichier PDF PJ;11;43292;5;0;5
+71;62;Génération PDF Note administration;Génération du fichier PDF Note à l'administration;4;43243;3;0;3
+72;62;Impression de la page;Mise en place des traitements permettant l'impression de la page;6;43353;3;0;3
+73;62;Navigation Retour Récap;Mise en place des traitements d'identification et de retour à la page suivante;6;43299;3;3;0
+74;62;Validation Saisie;Mise en place des traitements de validation de la saisie;7;43339;5;4;1
+75;2;Saisie;Mise en place de la saisie;6;43254;102;59;43
+76;75;Navigation vers Récap;Mise en place de la navigation vers la page Récapitulatif;6;43237;3;1;2
+77;75;Champs de saisie;Traitement de génération des champs de saisie;6;43249;10;9;1
+78;75;Assistance de saisie;Traitement de génération de l'assistance de saisie;11;43316;5;4;1
+79;75;NAS de stockage de l'assistance de saisie;Mise en place du NAS de stockage de la documentation DAUA;3;43275;10;9;1
+80;75;Blocs de saisie;Traitement de génération des blocs de saisie;11;43388;5;4;1
+81;75;Tableaux de saisie;Traitement de génération des tableaux de saisie;1;43275;10;6;4
+82;75;Retour guidage;Retour vers le guidage pour modification;6;43226;2;0;2
+83;75;Controles de surface saisie;Mise en place des contrôles de surface sur la saisie;11;43329;5;4;1
+84;75;Page Demandeur;Remplissage de la page Demandeur;11;43218;26;8;18
+85;84;Autocomplétion pays;Mise en place de l'autocomplétion PSL sur le pays;6;43246;1;1;0
+86;84;Autocomplétion commune BAN;Mise en place de l'autocomplétion BAN sur la commune;5;43244;5;1;4
+87;84;Autocomplétion département BAN;Mise en place de l'autocomplétion BAN sur le département;5;43224;5;1;4
+88;84;Autocomplétion cp BAN;Mise en place de l'autocomplétion BAN sur le code postal;5;43338;5;0;5
+89;84;Appel API Entreprise;Appel à l'API entreprise;6;43299;2;1;1
+90;84;Modales de validation commune + cp + département;Mise en place de la modale de validation de la saisie utilisateur;5;43214;5;2;3
+91;84;Débrayage commune + cp + département;Mise en place du traitement de débrayage sur les champs commune, cp et département;5;43326;3;2;1
+92;75;Page Démolition;Remplissage de la page Démolition;6;43284;5;1;4
+93;75;Page Mairie;Remplissage de la page Mairie;11;43334;5;4;1
+94;75;Page Tableau des surfaces 1;Remplissage de la page surfaces 1;11;43222;5;2;3
+95;75;Page Tableau des surfaces 2;Remplissage de la page surfaces 2;11;43234;5;3;2
+96;75;Page pièces justificatives;Remplissage de la page justificatives;11;43266;6;4;2
+97;96;Selection des PJ;Mise en place des champs PJ;11;43287;2;1;1
+98;96;Affichage des critères;Mise en place des champs de critères des PJ;11;43366;2;2;0
+99;96;Affichage des noms de PJ;Mise en place des champs permettant de renseigner les noms des PJ;4;43348;1;1;0
+100;96;Champs d'URL d'upload;Mise en place des champs permettant de renseigner les url d'upload des PJ;0;43209;1;0;1
+101;2;Aide;Page d'aide;11;43355;4;1;3
+102;101;Contenu aide;Mise en place du contenu de la page d'aide;11;43315;1;1;0
+103;101;Navigation Retour Aide;Traitement d'identification et de navigation vers la page d'appel;11;43340;3;0;3
+104;2;Menu;Mise en place du menu;6;43319;31;15;16
+105;104;Liste des blocs principaux;Placement des liens vers les pages principales des principaux blocs d'avancement de la démarche;6;43267;2;1;1
+106;104;Liste des pages de saisie;Placement des liens vers les pages de saisie affichées;6;43334;5;1;4
+107;104;Affichage de l'état de saisie;Mise en place de l'état de saisie des différentes pages;6;43284;3;2;1
+108;104;Bouton d'aide;Placement du bouton d'accès à la page d'aide;11;43330;1;1;0
+109;104;URL Géoportail;Placement du bouton d'accès à l'URL Géoportail;11;43347;1;0;1
+110;104;URL Mairie;Placement du bouton d'accès à l'URL Mairie;6;43190;1;0;1
+111;104;Responsive design Menu;Style responsive design du menu;0;43204;5;2;3
+112;104;Champ mémo;Intégration de la modale du mémo et du champ de saisie;0;43266;10;8;2
+113;104;Génération PDF Mémo;Génération PDF du contenu du champ Mémo;0;43267;3;0;3
+114;2;Cartouche;Mise en place du cartouche;6;43264;6;4;2
+115;114;Avancement de la saisie;Calcul et affichage de l'avancement de la saisie;11;43240;1;0;1
+116;114;Information démarche;Calcul et affichage des informations de la démarche;6;43293;2;2;0
+117;114;délais instruction;Calcul et affichage des délais d'instruction;11;43386;2;1;1
+118;114;type travaux;Calcul et affichage des types de travaux;11;43366;1;1;0
+119;2;Transfert/Téléchargement;Page Transfert téléchargement;11;43322;30;19;11
+120;119;Choix de soumission;Champ de choix de soumission ou de dépôt manuel;11;43378;2;2;0
+121;119;Téléchargement Docs;Liens de téléchargement des principaux fichiers générés dans la démarche;6;43247;5;0;5
+122;119;Génération Docs;Génération des fichiers ;6;43264;20;17;3
+123;122;ZIP;Archivage des fichiers au format ZIP;11;43270;5;3;2
+124;122;Cerfa;Génération du cerfa identifié;6;43326;15;14;1
+125;119;Affichage des infos mairie;Affichage des infos de la mairie en cas de choix de dépôt manuel;11;43244;3;0;3
+126;2;Fin démarche;Page fin démarche;11;43346;1;0;1
+127;2;Confirmation;Page confirmation;11;43361;1;1;0
